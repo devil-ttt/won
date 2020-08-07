@@ -5,23 +5,23 @@
 
 
 作者红鲤鱼绿鲤鱼与驴  2020.8.6
-2020.8.7 修复很多bug,新闻软件不错
+2020.8.7 修复很多bug,新闻加计步软件不错
 
 //=================================
 #圈叉趣走App签到
-https:\/\/mobile01\.91quzou\.com\/rebate\/qz\/task\/homeTaskView\.do url script-request-header quwalk.js
+https:\/\/(mobile01\.91quzou\.com\/rebate\/qz\/task\/homeTaskView\.do)|(mini1\.91quzou\.com\/activity\/inviteVideo\.do) url script-request-header quwalk.js
 
 
-mit=mobile01.91quzou.com
+mit=mobile01.91quzou.com,mini1.91quzou.com
 
 //====================================
 
 #loon 趣走App签到
-http-request https:\/\/mobile01\.91quzou\.com\/rebate\/qz\/task\/homeTaskView\.do script-path=quwalk.js, requires-body=true, timeout=30, tag=趣走签到
+http-request https:\/\/(mobile01\.91quzou\.com\/rebate\/qz\/task\/homeTaskView\.do)|(mini1\.91quzou\.com\/activity\/inviteVideo\.do) script-path=quwalk.js, requires-body=true, timeout=30, tag=趣走签到
 
-mit=mobile01.91quzou.com
+mit=mobile01.91quzou.com,mini1.91quzou.com
 
-#定时参考3分钟
+#定时参考3分钟,打开任首页视频奖励和微信购物小程序获取Cookies
 
 */
 
@@ -39,7 +39,11 @@ const log=0;//设置0关闭日志,1开启日志
 const quwalk="趣走APP";
 const quwalkhdname="quwalkhdname";
 var quwalk_hd=$iosrule.read(quwalkhdname);
+const quwalkwxhdname="quwalkwxhdname";
+var quwalk_wxhd=$iosrule.read(quwalkwxhdname);
+
 var quwalk_code="rebate/qz/task/homeTaskView.do";
+var quwalk_wx="activity/inviteVideo.do";
 var shuai="**********🔔**************";
 //++++++++++++++++++++++++++++++++
 
@@ -242,6 +246,7 @@ function quwalk_dailytask(qq)
   var r5="[每日任务1000步奖励]";
   var r6="[每日任务浏览商品180秒奖励]";
   var r7="[每日任务7500步奖励]";
+  var r8="[每日任务光顾小程序红包]"
   var bd1=`pageType=&taskId=FCLTQOVE&type=1`;
  var tsbd1=`completedMethod=0&pageType=&taskId=FCLTQOVE&type=1`;
 var bd2=`pageType=&taskId=TU232QYQ`;
@@ -260,7 +265,7 @@ var bd4=`pageType=&taskId=HUYTYIIS&type=1`;
     var tsbd7=`completedMethod=0&pageType=&taskId=91T7AZP6&type=1`;
   
   
-  for (var i = 0; i < 8; i++) {
+  for (var i = 0; i < 10; i++) {
       (function(i) {
         setTimeout(function() {
           
@@ -268,7 +273,7 @@ var bd4=`pageType=&taskId=HUYTYIIS&type=1`;
           if(i==0)
           {
             quwalk_completeTask(r1,tsbd1);
-            quwalk_daytaskreceive(r1,bd1);}
+quwalk_daytaskreceive(r1,bd1);}
           
           
            else if (i==1)
@@ -300,9 +305,9 @@ var bd4=`pageType=&taskId=HUYTYIIS&type=1`;
 {
   quwalk_completeTask(r7,tsbd7);
   quwalk_daytaskreceive(r7,bd7);
-
                                  
 }
+else if(i==7)quwalk_weixin(r8);
           
          }, (i + 1) * 500);
               })(i)
@@ -312,6 +317,49 @@ var bd4=`pageType=&taskId=HUYTYIIS&type=1`;
   
   
 }
+
+function quwalk_weixin(title)
+{var result2="";var result1=title;
+var newbd=JSON.parse(quwalk_wxhd);
+
+  const llUrl2={
+        url:"https://mini1.91quzou.com/activity/inviteVideo.do",headers:newbd,body:`ic=`}
+
+  $iosrule.post(llUrl2,function(error, response, data) {
+    if(log==1)console.log(result1+"\n"+data)
+ 
+  var obj=JSON.parse(data);
+if(obj.code=="0"&&obj.msg=="成功")
+{result2="本次累计获取趣币🛋"+obj.data.receivedAward+",🥗剩余开红包数"+obj.data.remainCount+"📛";
+quwalk_subweixin(result1+result2);
+}
+else 
+{result2="获取开包数据错误✅"
+  printlog(result1+result2)}
+  
+})}
+
+
+function quwalk_subweixin(title)
+{var result2="";var result1=title;
+var newbd=JSON.parse(quwalk_wxhd);
+  const llUrl2={
+        url:"https://mini1.91quzou.com/activity/inviteVideo/receive.do",headers:newbd,body:`ic=`}
+
+  $iosrule.post(llUrl2,function(error, response, data) {
+    if(log==1)console.log(result1+"\n"+data)
+ 
+  var obj=JSON.parse(data);
+if(obj.code=="0")
+result2=obj.msg+",趣币"+obj.data.amount;
+else if(obj.code=="1")
+result2=obj.msg;
+else
+result2="获取开包数据错误✅"
+  printlog(result1+result2)
+  
+})}
+
 
 function quwalk_homeTaskView()
 {var result2="";var result1="[首页视频奖励查询]";
@@ -489,7 +537,14 @@ if(urlval.indexOf(quwalk_code)>=0)
   console.log(ck)
 if (ck==true) 
  papa(quwalk,"[获取签到数据]","✌🏻成功");}
-
+else
+if(urlval.indexOf(quwalk_wx)>=0)
+{
+ 
+ var ck2= $iosrule.write(JSON.stringify(md_hd),quwalkwxhdname);
+  console.log(ck2)
+if (ck2==true) 
+ papa(quwalk,"[获取微信小程序数据]","✌🏻成功");}
 
 
 
@@ -539,7 +594,7 @@ function getRandom(start, end, fixed = 0) {
 function printlog(res)
 {
    console.log(res);
- console.log("***********************🔔**************")
+ console.log("**********🔔***********")
 }
 
 
@@ -587,6 +642,9 @@ function iosrule() {
     }
     return { isRequest, isQuanX, isSurge, notify, write, read, get, post, end }
 };
+
+
+
 
 
 
