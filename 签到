@@ -1,0 +1,161 @@
+# Task配置 By nzw9314
+# GitHub主页(https://github.com/nzw9314)
+# TG通知频道 (https://t.me/nzw9314News)
+
+# 定时脚本
+# 彩云天气 (By Peng-YM)
+# 打开手机设置 > 隐私 > 定位服务
+# (1) 打开定位服务
+# (2) 选择天气，设置永远允许天气访问位置信息，并允许使用精确位置。
+# (3) 打开box.js设置API token即可。
+cron "0 0-21/3 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气
+# > 倒数日
+# 需要自己修改节日
+cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/daysmatter.js,tag=倒数日
+
+# > 京东价格提醒(By toulanboy)
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js, tag=京东价格提醒
+
+# > 微博通知 (By @zZPiglet)
+# 进入 https://m.weibo.cn 并登陆，获取cookie后进入boxjs配置
+cron "0 * * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js
+
+# 签到脚本
+# > NobyDa
+# > 京东
+cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,tag=京东
+
+# > 爱奇艺
+cron "20 0 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,tag=爱奇艺
+
+# @chavyleung
+
+# > 百度签到
+#先登录,浏览器访问一下: https://tieba.baidu.com 或者 https://tieba.baidu.com/index/
+cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js,tag=百度签到(网页)
+
+
+# 网易新闻
+#打开 APP 然后手动签到 1 次
+cron "30 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.js,tag=网易新闻
+
+#  人人视频
+#打开 APP, 访问下`个人中心`
+cron "50 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,tag=人人视频
+
+
+# 腾讯视频
+#1.手机浏览器访问并登录: https://film.qq.com/
+cron "30 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,tag=腾讯视频
+
+
+# 字幕组
+#网页:打开浏览器访问: http://www.rrys2019.com, App: 打开 APP 即可
+cron "0 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js,tag=字幕组
+
+# QQ音乐
+#打开 APP 然后手动签到 1 次
+cron "10 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.js,tag=QQ音乐
+
+
+# 美团外卖
+#打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
+cron "30 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.js,tag= 美团外卖
+
+# 美团
+#打开 APP , 然后手动签到 1 次, (`首页` > `红包签到`)
+cron "40 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,tag=美团
+
+# 樊登读书
+#打开 APP 手动签到一次: 访问下右下角 `我的` > `签到`
+cron "30 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.js,tag=樊登读书
+
+
+# 苏宁易购
+# 首页 > 签到有礼
+# 首页 > 领取红包
+# 首页  > 天天低价
+cron "0 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.js,tag=苏宁易购
+
+
+# 趣头条
+# 打开 APP 进入签到:  `右上角` > `签到`
+# 阅读篇数获取Cookie:`小视频`中播放一段时间视频即可获取,具体的阅读篇数奖励请到应用内手动点击
+# 首页金币奖励:此Cookie在首页的推荐中随机出现,随机获取,并不一定会出现。
+cron "0 0 * * * *" script-path= https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js,tag=趣头条
+
+# > 京东618
+cron "10,20,30,40,50 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jd/jd.618.js, timeout=600, tag=京东618
+cron "0 10,12,18,20 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jd/jd.618.boom.js, timeout=600, tag=京东618炸弹
+
+
+# > 切换会话
+cron "0 12 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, tag=切换会话
+
+# > 招行信用卡(公众号) (By @iNotification)
+#招商银行信用卡微信公众号
+cron "50 9 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/cmbchina.js,tag=招行信用卡
+
+# > 京东成长分 (By @barrymchen)
+#打开京东金融app，“信用”-》“小白成长分”
+cron "0 10 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jdczf.js,tag= 京东成长分
+
+# > 电视家 (By @Macsuny)
+# APP登陆账号后，点击底部’赚赚‘进入签到页面,即可获取Cookie.
+cron "0 0 7,22 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/dianshijia.js,tag=电视家
+
+# > 微博 & 微博钱包 (By @Macsuny)
+#1.打开微博App获取Cookie.获取后请注释或禁用Cookie
+#2.打开微博钱包点击签到，获取Cookie，
+#3.钱包已经签到无法获取
+cron "0 11 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,tag=微博&钱包
+
+# > 中青看点极速版 (By @Macsuny)
+# 1.进入app，签到一次,即可获取Cookie. 
+# 2.阅读一篇文章，获取阅读请求body，
+# 3.在阅读文章最下面有个惊喜红包，点击获取惊喜红包请求
+# 4.激励视频获取方法: 关闭vpn，进入任务中心=>抽奖赚点击下面第一个宝箱，出现视频广告页面，然后打开vpn，等待视频播放完毕，点击点我继续领青豆，再重复一次上面操作，获取激励视频请求的body
+cron "20 11 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,tag=中青看点极速版
+
+# > 滴滴出行 (By @zZPiglet)
+# 进入"滴滴出行"，若弹出"首次写入滴滴出行 Token 成功"
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js,tag=滴滴出行
+cron "59 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js,tag=滴滴出行
+
+# > 京东农场 (By liuxiaoyucc、lxk0301 & iepngs)
+# 京东App - 右下角"我的"- 游戏与互动-东东农场
+cron "0 7,12,18 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_fruit.js, tag=京东农场
+
+# > 京东萌宠 (By liuxiaoyucc、lxk0301 & iepngs)
+# 京东App - 右下角"我的"- 游戏与互动-东东萌宠
+cron "0 7,12,18 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_pet.js, tag=京东萌宠
+
+# > 京东宠汪汪 (By uniqueque、lxk0301 & iepngs)
+# 京东App - 右下角"我的"- 游戏与互动-宠汪汪
+cron "0 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy.js, tag=京东宠汪汪
+cron "0 0-16/8 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_reward.js, tag=宠汪汪积分兑换奖
+
+# > 京东种豆得豆 (By uniqueque、lxk0301 & iepngs)
+# 京东App - 右下角"我的"- 游戏与互动-摇钱树
+cron "0 7-21/3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js, tag=京东种豆得豆
+
+# > 京东摇钱树 (By lxk0301)
+# 京东App - 右下角"我的"- 游戏与互动-摇钱树
+cron "0 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_moneyTree.js, tag=京东摇钱树
+
+# > 京东加速 (By lxk0301)
+# 京东App - 右下角"我的"- 游戏与互动-天天加速
+cron "0 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_speed.js, tag=京东加速
+
+# > 京东818手机节 (By lxk0301)
+cron "0 0-16/8 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js, tag=京东818手机节
+
+# > 取关京东店铺商品 (By lxk0301)
+cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_unsubscribe.js,tag=取关京东店铺商品
+
+
+
+
+
+
+
