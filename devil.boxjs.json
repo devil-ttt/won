@@ -18,14 +18,14 @@
           "type": "boolean"
         }
       ],
-       "repo": "https://github.com/Sunert/Scripts/blob/master/Task/txnews.js",
+       "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/txnews.js",
        "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png", "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png"],
-       "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js"
+       "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/txnews.js"
     },
 {
-      "id": "txnews2",
-      "name": "腾讯新闻",
-      "keys": ["sy_signurl_txnew2s", "sy_cookie_txnew2s","video_txnew2s"],
+      "id": "txnews",
+      "name": "腾讯新闻2",
+      "keys": ["sy_signurl_txnews2", "sy_cookie_txnews2","video_txnews2"],
       "author": "@sunert",
       "settings": [
         {
@@ -42,7 +42,7 @@
           "type": "boolean"
         }
       ],
-       "repo": "https://github.com/Sunert/Scripts/blob/master/Task/txnews2.js",
-       "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/txnew2s.png", "https://raw.githubusercontent.com/Orz-3/task/master/txnews2.png"],
-       "script": "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js"
+       "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/txnews.js",
+       "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png", "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png"],
+       "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/txnews.js"
     },
