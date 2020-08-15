@@ -1,4 +1,11 @@
 {
+  "id": "devil.app.sub",
+  "name": "devil 签到应用订阅",
+  "author": "@Sunert",
+  "icon": "https://avatars2.githubusercontent.com/u/47924389?s=460&u=5152f048a9e8aaa45102763a578172407c40fcc8&v=4",
+  "repo": "https://gitee.com/Sunert/Scripts/tree/master",
+  "apps": [
+     {
       "id": "txnews",
       "name": "腾讯新闻",
       "keys": ["sy_signurl_txnews", "sy_cookie_txnews","video_txnews"],
@@ -46,3 +53,10 @@
        "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png", "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png"],
        "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/txnews.js"
     },
+        "author": "@sunert",
+      "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/trainquery.js",
+      "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/12306.png", "https://raw.githubusercontent.com/Orz-3/task/master/12306.png"],
+      "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/trainquery.js"
+    }
+  ]
+}
