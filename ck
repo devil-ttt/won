@@ -7,6 +7,9 @@ hostname = h5.youzan.com, api.infzm.com, api.xiaoheihe.cn, exp.angelalign.com, n
 
 # NobyDa
 
+# > GLADOS
+http-request https:\/\/glados\.rocks\/api\/user\/status script-path=https://github.com/evilbutcher/Quantumult_X/raw/master/check_in/glados/glados.js, timeout=10, enabled=false, tag=GLaDOS Cookie获取
+
 # > 京东
 # 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
 http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
