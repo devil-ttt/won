@@ -7,6 +7,10 @@ hostname = h5.youzan.com, api.infzm.com, api.xiaoheihe.cn, exp.angelalign.com, n
 
 # NobyDa
 
+# >来客有礼宠汪汪强制助力
+http-request ^https:\/\/draw\.jdfcloud\.com\/\/pet\/enterRoom\?reqSource=weapp&invitePin=.*+(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?|^https:\/\/draw\.jdfcloud\.com\/\/pet\/helpFriend\?friendPin script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_help.js
+ , requires-body=true, timeout=10, tag=来客有礼宠汪汪强制助力
+
 # > GLADOS
 http-request https:\/\/glados\.rocks\/api\/user\/status script-path=https://github.com/evilbutcher/Quantumult_X/raw/master/check_in/glados/glados.js, timeout=10, enabled=false, tag=GLaDOS Cookie获取
 
