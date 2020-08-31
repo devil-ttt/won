@@ -88,7 +88,7 @@ http-request ^https:\/\/icbc1\.wlphp\.com:8444\/js\/api\/index\/signIn script-pa
 
 
 # > 电视家
-http-request http:\/\/act\.gaoqingdianshi\.com\/\/api\/v4\/sign\/signin script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/dianshijia.js
+http-request http:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/sign\/signin script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/dianshijia.js
 http-request http:\/\/api\.gaoqingdianshi\.com\/api\/v2\/cash\/withdrawal script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/dianshijia.js
 
 # > 微博(By @Macsuny)
