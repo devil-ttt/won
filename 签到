@@ -2,6 +2,9 @@
 # GitHub主页(https://github.com/nzw9314)
 # TG通知频道 (https://t.me/nzw9314News)
 
+#小米运动
+cron "15 17 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/backUp/xmSports.js, tag=小米运动修改运动步数
+
 #摇京豆
 cron "5 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_club_lottery.js,tag=摇京豆
 
