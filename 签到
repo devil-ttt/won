@@ -1,7 +1,8 @@
 # Task配置 By nzw9314
 # GitHub主页(https://github.com/nzw9314)
 # TG通知频道 (https://t.me/nzw9314News)
-
+#京东抽奖机
+cron "11 1 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js,tag=京东抽奖机
 #小米运动
 cron "15 17 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/backUp/xmSports.js, tag=小米运动修改运动步数
 
