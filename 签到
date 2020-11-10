@@ -3,72 +3,15 @@
 # TG通知频道 (https://t.me/nzw9314News)
 #京东抽奖机
 cron "11 1 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js,tag=京东抽奖机
-#小米运动
-cron "15 17 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/backUp/xmSports.js, tag=小米运动修改运动步数
-
-#摇京豆
-cron "5 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_club_lottery.js,tag=摇京豆
-
 #京东时光机
 cron "20 0-20/4 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_timeMachine.js,tag=京东时光机
 #京东大赢家
 cron "5 9-22 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_bigWinner.js,tag=京东大赢家
-
-# 宠汪汪强制助力
-http-request ^https:\/\/draw\.jdfcloud\.com\/\/pet\/enterRoom\/h5\?reqSource=weapp&invitePin=.*+(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?|^https:\/\/draw\.jdfcloud\.com\/\/pet\/helpFriend\?friendPin script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_help.js, requires-body=true, timeout=10, tag=宠汪汪强制为别人助力
-# 京东星推官
-cron "2 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_xtg.js,tag=京东星推官
 # > 京东
 cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,tag=京东
-# > 京东进店领豆
-cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js,tag=进店领豆
-
-# > 京东超市
-cron "11 1-23/5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js,tag=京小超
-# 京小超兑换奖品
-cron "0 0 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js,tag=京小超兑换奖品
-
-# >宠汪汪喂食
-cron "0 * * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_feedPets.js,tag=宠汪汪喂食
-cron "0 1 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_steal.js,tag=宠汪汪偷好友积分与狗粮
-
-# > 京东农场 (By liuxiaoyucc、lxk0301 & iepngs)
-# 京东App - 右下角"我的"- 游戏与互动-东东农场
-cron "0 7,12,18 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_fruit.js, tag=京东农场
-
-# > 京东萌宠 (By liuxiaoyucc、lxk0301 & iepngs)
-# 京东App - 右下角"我的"- 游戏与互动-东东萌宠
-cron "0 7,12,18 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_pet.js, tag=京东萌宠
-
-# > 京东宠汪汪 (By uniqueque、lxk0301 & iepngs)
-# 京东App - 右下角"我的"- 游戏与互动-宠汪汪
-cron "0 1,4 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy.js, tag=京东宠汪汪
-cron "0 0-16/8 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_reward.js, tag=宠汪汪积分兑换奖
-
-# > 京东种豆得豆 (By uniqueque、lxk0301 & iepngs)
-# 京东App - 右下角"我的"- 游戏与互动-摇钱树
-cron "0 7-21/3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js, tag=京东种豆得豆
-
-# > 京东摇钱树 (By lxk0301)
-# 京东App - 右下角"我的"- 游戏与互动-摇钱树
-cron "0 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_moneyTree.js, tag=京东摇钱树
-
-# > 京东加速 (By lxk0301)
-# 京东App - 右下角"我的"- 游戏与互动-天天加速
-cron "0 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_speed.js, tag=京东加速
 
 # > 京东价格提醒(By toulanboy)
 cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js, tag=京东价格提醒
-
-# > 京东818手机节 (By lxk0301)
-cron "0 0-16/8 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js, tag=京东818手机节
-
-# > 京东618
-cron "10,20,30,40,50 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jd/jd.618.js, timeout=600, tag=京东618
-cron "0 10,12,18,20 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jd/jd.618.boom.js, timeout=600, tag=京东618炸弹
-
-# > 取关京东店铺商品 (By lxk0301)
-cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_unsubscribe.js,tag=取关京东店铺商品
 cron "0 0 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/birthdayCountDown/index.js, tag=生日提醒
 
 # 彩云天气 (By Peng-YM)
