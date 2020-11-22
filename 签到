@@ -1,5 +1,4 @@
-#惊喜工厂
-cron "15 * * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js,tag=京喜工厂
+
 #东东工厂
 cron "1 */3 * * *" script-path=https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_factory.js,tag=东东工厂
 #京东排行榜
