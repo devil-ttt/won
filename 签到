@@ -1,7 +1,7 @@
 hostname=mqqapi.reader.qq.com
 #QQ阅读
 cron "*/20 * * * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/qqread.js,tag=QQ阅读
-http-response ^https:\/\/mqqapi\.reader\.qq\.com\/mqq\/user\/init script-path=https://raw.githubusercontent.com/devil-ttt/won/master/qqread.js, requires-body=true, timeout=10, tag=QQ阅读CK
+http-request https:\/\/mqqapi\.reader\.qq\.com\/mqq\/user\/init script-path=https://raw.githubusercontent.com/devil-ttt/won/master/qqread.js, requires-body=true, timeout=10, tag=QQ阅读CK
 
 https:\/\/mqqapi\.reader\.qq\.com\/mqq\/user\/init script-path=
 #东东工厂
