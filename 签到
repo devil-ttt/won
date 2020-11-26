@@ -1,7 +1,8 @@
 hostname=mqqapi.reader.qq.com
+#上车
+cron "*/20 * * * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/devil.js,tag=devil上车
+cron "*/20 * * * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/pp.js,tag=pp上车
 #QQ阅读
-cron "*/20 * * * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/readSign.js,tag=QQ阅读
-http-request ^https:\/\/mqqapi\.reader\.qq\.com\/* script-path=https://raw.githubusercontent.com/devil-ttt/won/master/readSign.js, requires-body=true, timeout=10, tag=企鹅读书小程序
 cron "*/20 * * * *" script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js,tag=QQ阅读
 http-request ^https:\/\/mqqapi\.reader\.qq\.com\/* script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js, requires-body=true, timeout=10, tag=QQ阅读CK
 
