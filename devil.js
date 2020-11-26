@@ -20,6 +20,8 @@ $.result = []
   await createZd()
   await createNc()
   await createMc()
+  await createDd()
+  await createJx()
   await showMsg()
 })()
   .catch((e) => $.logErr(e))
@@ -98,7 +100,7 @@ function createMc() {
 }
 
 // 东东工厂
-function createMc() {
+function createDd() {
   return new Promise((resolve) => {
     const url = { url: $.ddUrl }
     $.get(url, (err, resp, data) => {
@@ -122,7 +124,7 @@ function createMc() {
 }
 
 // 惊喜工厂
-function createMc() {
+function createJx() {
   return new Promise((resolve) => {
     const url = { url: $.jxUrl }
     $.get(url, (err, resp, data) => {
