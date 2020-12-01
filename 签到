@@ -1,4 +1,6 @@
 hostname=mqqapi.reader.qq.com
+#京喜金牌厂长
+cron "10 8 * * *" script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_story.js, tag=京喜金牌厂长
 #上车
 cron "20 6 1,10,20 * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/devil.js,tag=devil上车
 cron "20 6 1,10,20 * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/pp.js,tag=pp上车
