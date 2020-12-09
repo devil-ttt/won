@@ -1,18 +1,5 @@
 hostname=mqqapi.reader.qq.com
-#苹果抽奖机
-cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_apple_live.js,tag=苹果抽奖机
-#直播红包雨
-cron "30 20-23/1 * * *" script-path=https://raw.githubusercontent.com/shylocks/jd_scripts/master/jd_live_redrain2.js, tag=超级直播间红包雨
-cron "0 0,9,11,13,15,17,19,20,21,23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_live_redrain.js, tag=直播红包雨
-#京东快递签到
-cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_kd.js, tag=京东快递签到
-# 健康抽奖机
-cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_health.js,tag=健康抽奖机
-# 京东汽车
-# 活动入口：首页京东汽车屏幕右中部，车主福利,长期活动,签到满500赛点可兑换500京豆
-cron "10 7 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car.js, tag=京东汽车
-#京喜金牌厂长
-cron "10 8 * * *" script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_story.js, tag=京喜金牌厂长
+
 #上车
 cron "20 6 1,10,20 * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/devil.js,tag=devil上车
 cron "20 6 1,10,20 * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/pp.js,tag=pp上车
