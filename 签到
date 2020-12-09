@@ -1,7 +1,6 @@
 hostname=mqqapi.reader.qq.com,weather-data.apple.com, api.weather.com
 
-#墨迹天气
-cron "0 0-21/3 * * *" script-path=https://gitee.com/Sunert/Scripts/blob/master/Task/moji.js,tag=墨迹天气
+
 #上车
 cron "20 6 1,10,20 * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/devil.js,tag=devil上车
 cron "20 6 1,10,20 * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/pp.js,tag=pp上车
