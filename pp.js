@@ -11,7 +11,7 @@ $.ncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/e4e2830220794e1d93f19
 $.mcUrl = 'http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzMTAwMDAwMDAyODc1MTEzMw==/'  // 萌宠
 $.ddUrl = 'http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5m9cZ2b71CoexA-qbgMSegk/'  // 东东
 $.jxUrl = 'http://api.turinglabs.net/api/v1/jd/jxfactory/create/KhRBulQ8lvodbHgnbPLIcQ==/'  // 惊喜
-
+$.zzUrl = 'https://code.chiang.fun/api/v1/jd/jdzz/create/AUWE5ma6Zm2FZCGWq2XwZww/' //赚赚
 $.result = []
 
 
@@ -22,6 +22,7 @@ $.result = []
   await createMc()
   await createDd()
   await createJx()
+  await createzz()
   await showMsg()
 })()
   .catch((e) => $.logErr(e))
@@ -146,6 +147,30 @@ function createJx() {
     })
   })
 }
+// 京东赚赚
+function createMc() {
+  return new Promise((resolve) => {
+    const url = { url: $.zzUrl }
+    $.get(url, (err, resp, data) => {
+      try {
+         const obj = JSON.parse(data)
+        if (obj.code == 200) {
+          $.result.push("赚赚互助码添加成功✅")
+        }else
+		if(obj.code == 400) {
+          $.result.push("赚赚互助码已存在")
+        }else{
+          $.result.push("赚赚互助码添加异常")
+        }
+      } catch (e) {
+        $.logErr(e, resp)
+      } finally {
+        resolve()
+      }
+    })
+  })
+}
+
 
 function showMsg() {
   return new Promise((resolve) => {
