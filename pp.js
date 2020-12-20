@@ -148,7 +148,7 @@ function createJx() {
   })
 }
 // 京东赚赚
-function createMc() {
+function createzz() {
   return new Promise((resolve) => {
     const url = { url: $.zzUrl }
     $.get(url, (err, resp, data) => {
