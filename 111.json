@@ -1,0 +1,136 @@
+hostname=mqqapi.reader.qq.com,weather-data.apple.com, api.weather.com
+#墨迹天气
+cron "1 */3 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/moji.js,tag=墨迹天气
+#健康抽奖机
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_health.js,tag=健康抽奖机
+#上车
+cron "20 6 1,10,20 * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/devil.js,tag=devil上车
+cron "20 6 1,10,20 * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/pp.js,tag=pp上车
+#QQ阅读
+cron "*/20 * * * *" script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js,tag=QQ阅读
+http-request ^https:\/\/mqqapi\.reader\.qq\.com\/* script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js, requires-body=true, timeout=10, tag=QQ阅读CK
+
+https:\/\/mqqapi\.reader\.qq\.com\/mqq\/user\/init script-path=
+#东东工厂
+cron "1 */3 * * *" script-path=https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_factory.js,tag=东东工厂
+#京东排行榜
+cron "11 8 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js,tag=京东排行榜
+#京东抽奖机
+cron "11 1 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js,tag=京东抽奖机
+
+# > 京东
+cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,tag=京东
+
+# > 京东价格提醒(By toulanboy)
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js, tag=京东价格提醒
+cron "0 0 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/birthdayCountDown/index.js, tag=生日提醒
+
+# 彩云天气 (By Peng-YM)
+# 打开手机设置 > 隐私 > 定位服务
+# (1) 打开定位服务
+# (2) 选择天气，设置永远允许天气访问位置信息，并允许使用精确位置。
+# (3) 打开box.js设置API token即可。
+cron "0 0-21/3 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气
+http-request https:\/\/((weather-data\.apple)|(api.weather))\.com script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, require-body=false
+# > 倒数日
+# 需要自己修改节日
+cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/devil-ttt/won/master/daysmatter,tag=倒数日
+
+# >GLaDOS签到
+cron "5 0 * * *" script-path=https://github.com/evilbutcher/Quantumult_X/raw/master/check_in/glados/glados.js, tag=GLaDOS签到
+
+
+# > 微博通知 (By @zZPiglet)
+# 进入 https://m.weibo.cn 并登陆，获取cookie后进入boxjs配置
+cron "0 * * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js
+
+
+# >NASA每日一图
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/nasa/nasapic.js, tag=NASA每日一图
+
+# > 爱奇艺
+cron "20 0 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,tag=爱奇艺
+
+# @chavyleung
+
+# > 百度签到
+#先登录,浏览器访问一下: https://tieba.baidu.com 或者 https://tieba.baidu.com/index/
+cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js,tag=百度签到(网页)
+
+
+# 网易新闻
+#打开 APP 然后手动签到 1 次
+cron "30 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.js,tag=网易新闻
+
+#  人人视频
+#打开 APP, 访问下`个人中心`
+cron "50 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,tag=人人视频
+
+
+# 腾讯视频
+#1.手机浏览器访问并登录: https://film.qq.com/
+cron "30 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,tag=腾讯视频
+
+
+# 字幕组
+#网页:打开浏览器访问: http://www.rrys2019.com, App: 打开 APP 即可
+cron "0 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js,tag=字幕组
+
+# 美团外卖
+#打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
+cron "30 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.js,tag= 美团外卖
+
+# 美团
+#打开 APP , 然后手动签到 1 次, (`首页` > `红包签到`)
+cron "40 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,tag=美团
+
+# 樊登读书
+#打开 APP 手动签到一次: 访问下右下角 `我的` > `签到`
+cron "30 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.js,tag=樊登读书
+
+
+# 苏宁易购
+# 首页 > 签到有礼
+# 首页 > 领取红包
+# 首页  > 天天低价
+cron "0 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.js,tag=苏宁易购
+
+
+# 趣头条
+# 打开 APP 进入签到:  `右上角` > `签到`
+# 阅读篇数获取Cookie:`小视频`中播放一段时间视频即可获取,具体的阅读篇数奖励请到应用内手动点击
+# 首页金币奖励:此Cookie在首页的推荐中随机出现,随机获取,并不一定会出现。
+cron "0 0 * * * *" script-path= https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js,tag=趣头条
+
+# > 切换会话
+cron "0 12 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, tag=切换会话
+
+# > 招行信用卡(公众号) (By @iNotification)
+#招商银行信用卡微信公众号
+cron "50 9 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/cmbchina.js,tag=招行信用卡
+
+# > 京东成长分 (By @barrymchen)
+#打开京东金融app，“信用”-》“小白成长分”
+cron "0 10 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jdczf.js,tag= 京东成长分
+
+# > 电视家 (By @Macsuny)
+# APP登陆账号后，点击底部’赚赚‘进入签到页面,即可获取Cookie.
+cron "0 0 7,22 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/dianshijia.js,tag=电视家
+
+# > 微博 & 微博钱包 (By @Macsuny)
+#1.打开微博App获取Cookie.获取后请注释或禁用Cookie
+#2.打开微博钱包点击签到，获取Cookie，
+#3.钱包已经签到无法获取
+cron "0 11 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,tag=微博&钱包
+
+# > 中青看点极速版 (By @Macsuny)
+# 1.进入app，签到一次,即可获取Cookie. 
+# 2.阅读一篇文章，获取阅读请求body，
+# 3.在阅读文章最下面有个惊喜红包，点击获取惊喜红包请求
+# 4.激励视频获取方法: 关闭vpn，进入任务中心=>抽奖赚点击下面第一个宝箱，出现视频广告页面，然后打开vpn，等待视频播放完毕，点击点我继续领青豆，再重复一次上面操作，获取激励视频请求的body
+cron "20 11 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,tag=中青看点极速版
+
+# > 滴滴出行 (By @zZPiglet)
+# 进入"滴滴出行"，若弹出"首次写入滴滴出行 Token 成功"
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js,tag=滴滴出行
+cron "59 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js,tag=滴滴出行
