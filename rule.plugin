@@ -1,3 +1,4 @@
+[Rule]
 DOMAIN-SUFFIX,init.supersonicads.com,REJECT
 DOMAIN-SUFFIX,www.ADTILT.COM,REJECT
 DOMAIN-SUFFIX, rt.applovin.com,REJECT
