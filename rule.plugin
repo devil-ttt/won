@@ -1,19 +1,21 @@
-##
-#
-
 
 [Rule]
+URL-REGEX,pornemby.club,🔞𝐏𝐨𝐫𝐧𝐇𝐮𝐛
+USER-AGENT,pornemby.club,🔞𝐏𝐨𝐫𝐧𝐇𝐮𝐛
+DOMAIN-KEYWORD,pornemby.club,🔞𝐏𝐨𝐫𝐧𝐇𝐮𝐛
+DOMAIN-SUFFIX,pornemby.club,🔞𝐏𝐨𝐫𝐧𝐇𝐮𝐛
+DOMAIN,pornemby.club,🔞𝐏𝐨𝐫𝐧𝐇𝐮𝐛
 DOMAIN-SUFFIX,init.supersonicads.com,REJECT
 DOMAIN-SUFFIX,www.ADTILT.COM,REJECT
-DOMAIN-SUFFIX, rt.applovin.com,REJECT
+DOMAIN-SUFFIX,rt.applovin.com,REJECT
 DOMAIN-SUFFIX,app-measurement.com,REJECT
 DOMAIN-SUFFIX,my.rtmark.net,REJECT
 DOMAIN-SUFFIX,wd.adcolony.com,REJECT
 DOMAIN-SUFFIX,crashlyticsreports-pa.googleapis.com,REJECT
 GEOIP,CN,🎯𝐃𝐢𝐫𝐞𝐜𝐭
-DOMAIN,smtp.gmail.com,🖲️𝐏𝐫𝐨𝐱𝐲
-DOMAIN,imap.gmail.com,🖲️𝐏𝐫𝐨𝐱𝐲
-DOMAIN,pop.gmail.com,🖲️𝐏𝐫𝐨𝐱𝐲
+DOMAIN,smtp.gmail.com,🖲𝐏𝐫𝐨𝐱𝐲
+DOMAIN,imap.gmail.com,🖲𝐏𝐫𝐨𝐱𝐲
+DOMAIN,pop.gmail.com,🖲𝐏𝐫𝐨𝐱𝐲
 DOMAIN,imap-mail.outlook.com,DIRECT
 DOMAIN,smtp-mail.outlook.com,DIRECT
 DOMAIN,smtp.office365.com,DIRECT
@@ -22,4 +24,4 @@ USER-AGENT,hulu,美国🇺🇸
 DOMAIN-KEYWORD,hulu,美国🇺🇸
 DOMAIN-SUFFIX,hulu,美国🇺🇸
 DOMAIN,hulu,美国🇺🇸
-DOMAIN-SUFFIX,ehg-youtube.hitbox.com,🖲️𝐏𝐫𝐨𝐱𝐲
+DOMAIN-SUFFIX,ehg-youtube.hitbox.com,🖲𝐏𝐫𝐨𝐱𝐲
