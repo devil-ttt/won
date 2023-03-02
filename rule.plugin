@@ -12,4 +12,4 @@ DOMAIN,imap-mail.outlook.com,DIRECT
 DOMAIN,smtp-mail.outlook.com,DIRECT
 DOMAIN,smtp.office365.com,DIRECT
 DOMAIN,outlook.office365.com,DIRECT
-
+DOMAIN,cc.ccemby.tk,DIRECT
