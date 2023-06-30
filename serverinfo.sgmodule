@@ -6,7 +6,7 @@
 
 
 [Panel]
-Serverinfo = script-name= 甲骨文,update-interval=3600
+Serverinfo = script-name= OCR,update-interval=3600
 
 [Script]
 Serverinfo = type=generic,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/serverinfo.js, argument = url=http://129.154.193.41:22&name=Server Info&icon=party.popper
